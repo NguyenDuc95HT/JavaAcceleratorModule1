@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tinh dien tich hinh chu nhat</title>
+</head>
+<body>
+	<form action="/khaibaobien2.html">
+		Width: <br>
+		<input type="number" id="widthid"> <br>
+		Height: <br>
+		<input type="number" id="heightid"> <br>
+		<button type="button" onclick="getfunction()" > SUBMIT </button> <br>
+		<div id="resultId"></div>
+
+
+		<script>
+			function getElementId(idname) {
+				return document.getElementById(idname).value;
+			}
+			function getfunction() {
+				var width = parseInt(getElementId('widthid'));
+				var height = parseInt(getElementId('heightid'));
+
+				document.getElementById('resultId').innerHTML = 'Result: ' + width * height;
+			}
+		</script>
+
+	</form>
+
+</body>
+</html>
