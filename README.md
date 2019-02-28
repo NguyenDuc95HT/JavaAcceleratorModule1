@@ -1,0 +1,1 @@
+This is the location of the exercises stored from the codym of Nguyen Van Duc(DN-A0219-NGUYENVANDUC)
