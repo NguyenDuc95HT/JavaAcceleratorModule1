@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Kiem Tra Nam Nhuan </title>
+</head>
+<body>
+	<input type="number" id="yearId"> 
+	<br/>
+	<button type="button" onclick="myFunction()">SUBMIT</button>
+	<div id="areaId"></div>
+	<script>
+		function myFunction() {
+			var year = parseInt(document.getElementById('yearId').value);
+			if (year % 4 === 0){
+				if (year % 100 === 0) {
+					if (year % 400 === 0){
+						document.getElementById('areaId').innerHTML = 'Nam ' + year + ' la nam nhuan';
+					} else {
+						document.getElementById('areaId').innerHTML = 'Nam ' + year + ' khong phai la nam nhuan';
+					}
+					
+				} else {
+					document.getElementById('areaId').innerHTML = 'Nam ' + year + ' la nam nhuan';
+				}
+				
+			} else  {
+				document.getElementById('areaId').innerHTML = 'Nam ' + year + ' khong phai la nam nhuan';
+			}
+		}
+	</script>
+</body>
+</html>
