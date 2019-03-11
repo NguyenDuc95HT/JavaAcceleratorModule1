@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="./ThucHanhVoiToanTu.html">
+		<fieldset>
+			<legend>Bai 1:</legend>
+			<input type="number" name="inputA" id="idA">
+			<br/>
+			<br>
+			<input type="number" name="inputB" id="idB">
+			<br/>
+			<div id = 'resulId'>	
+			</div>
+			<br/>
+			<button type="button" name="button" onclick="bai1()">Submit</button>
+		</fieldset>
+	</form>
+	<br>
+	<form action="./ThucHanhVoiToanTu.html">
+		<fieldset>
+			<legend>Bai 2</legend>
+			<input type="text" id="inputId" >
+			<br>
+			<br>
+			<div id="bai2id"></div>
+			<button type="button" onclick="bai2()">Submit</button>
+
+		</fieldset>
+	</form>
+	<script>
+		bai1 = () => {
+			let a = parseInt(document.getElementById('idA').value);
+			let b = parseInt(document.getElementById('idB').value);
+			let resul = (a + b) < 4 ? 'Below' : 'Over';
+			document.getElementById('resulId').innerHTML = 'Result = ' + resul;
+		}
+		bai2 = () => {
+			let input = document.getElementById('inputId').value;
+			let result = (input === 'Employee')? 'Hello' : (input === 'Director')? 'Greetings' : (input === '')? 'No login': '';
+			document.getElementById('bai2id').innerHTML = 'Result = ' + result;
+		}
+	</script>
+</body>
+</html>
