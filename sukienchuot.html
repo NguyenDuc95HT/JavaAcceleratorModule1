@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Su kien chuot</title>
+</head>
+<body>
+	<img src="Images/football.png" alt="this is Football" id="football" onclick="moveRight()" ondblclick= "moveLeft()" style="position : relative ; left: 0">
+	<script>
+		function moveRight () {
+			var element = document.getElementById('football');
+			element.style.left = parseInt(element.style.left) + 5 +'px';
+		}
+		function moveLeft () {
+			var element = document.getElementById('football');
+			element.style.left = parseInt(element.style.left) - 5 +'px';
+		}
+
+	</script>
+
+</body>
+</html>
